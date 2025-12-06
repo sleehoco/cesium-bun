@@ -1,19 +1,19 @@
 {
-  "name": "cesium-cyber-nextjs",
+  "name": "cesium-cyber-bun",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "vitest",
-    "test:e2e": "playwright test",
-    "test:ui": "vitest --ui",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
-    "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "dev": "bun run next dev",
+    "build": "bun run next build",
+    "start": "bun run next start",
+    "lint": "bun run next lint",
+    "test": "bun test",
+    "test:e2e": "bunx playwright test",
+    "test:ui": "bun test --ui",
+    "db:generate": "bunx drizzle-kit generate",
+    "db:migrate": "bunx drizzle-kit migrate",
+    "db:push": "bunx drizzle-kit push",
+    "db:studio": "bunx drizzle-kit studio"
   },
   "dependencies": {
     "@ai-sdk/openai": "^2.0.75",
