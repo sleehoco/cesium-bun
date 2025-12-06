@@ -1,9 +1,14 @@
-# CesiumCyber - Next.js Migration
+# Cesium Cyber - Bun Version
 
-Modern cybersecurity company website built with Next.js 15, TypeScript, and Tailwind CSS.
+A high-performance cybersecurity application built with Next.js and Bun runtime.
+
+## 🚀 Bun Integration
+
+This version has been converted to use [Bun](https://bun.sh) as the JavaScript runtime for improved performance and faster development.
 
 ## Tech Stack
 
+- **Runtime:** Bun (JavaScript runtime)
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript (Strict Mode)
 - **Styling:** Tailwind CSS + shadcn/ui
@@ -11,26 +16,24 @@ Modern cybersecurity company website built with Next.js 15, TypeScript, and Tail
 - **Auth:** Supabase Auth
 - **State Management:** TanStack Query (React Query)
 - **Testing:** Vitest + Playwright
-- **Deployment:** Vercel
+- **Deployment:** Vercel (with Bun runtime)
 
-## Getting Started
+## 📋 Prerequisites
 
-### Prerequisites
+- [Bun](https://bun.sh/docs/installation) v1.0.0 or later
+- Node.js (for some compatibility packages)
 
-- Node.js 18+ (20+ recommended)
-- npm or yarn or pnpm
-
-### Installation
+## 🛠️ Installation
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd cesium-cyber-nextjs
+git clone https://github.com/sleehoco/cesium-bun.git
+cd cesium-bun
 ```
 
-2. Install dependencies:
+2. Install dependencies with Bun:
 ```bash
-npm install
+bun install
 ```
 
 3. Set up environment variables:
@@ -45,7 +48,7 @@ Edit `.env.local` and add your credentials:
 
 4. Run the development server:
 ```bash
-npm run dev
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -76,29 +79,29 @@ src/
 └── styles/              # Global styles
 ```
 
-## Available Scripts
+## 📦 Available Scripts
 
 ### Development
 ```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
+bun run dev          # Start development server
+bun run build        # Build for production
+bun run start        # Start production server
+bun run lint         # Run ESLint
 ```
 
 ### Testing
 ```bash
-npm run test         # Run unit tests with Vitest
-npm run test:ui      # Run tests with UI
-npm run test:e2e     # Run end-to-end tests with Playwright
+bun test             # Run unit tests with Vitest
+bun run test:ui      # Run tests with UI
+bun run test:e2e     # Run end-to-end tests with Playwright
 ```
 
 ### Database
 ```bash
-npm run db:generate  # Generate migrations
-npm run db:migrate   # Run migrations
-npm run db:push      # Push schema to database
-npm run db:studio    # Open Drizzle Studio
+bun run db:generate  # Generate migrations
+bun run db:migrate   # Run migrations
+bun run db:push      # Push schema to database
+bun run db:studio    # Open Drizzle Studio
 ```
 
 ## Features
@@ -140,25 +143,33 @@ Optional:
 - `ELEVENLABS_API_KEY` - ElevenLabs API key for text-to-speech
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID` - Google Analytics ID
 
-## Deployment
+## 🚀 Deployment
+
+This project is optimized for deployment on platforms that support Bun:
 
 ### Vercel (Recommended)
 
 1. Push code to GitHub
 2. Import repository in Vercel
 3. Configure environment variables
-4. Deploy
+4. Deploy with Bun runtime enabled
 
 ```bash
 # Or use Vercel CLI
 vercel
 ```
 
+### Other Platforms
+
+- Railway
+- DigitalOcean App Platform
+- Any platform with Docker support
+
 ### Manual Deployment
 
 ```bash
-npm run build
-npm run start
+bun run build
+bun run start
 ```
 
 ## Contributing
@@ -169,11 +180,33 @@ npm run start
 4. Run linting and tests
 5. Submit a pull request
 
-## License
+## 🔧 Configuration
 
-Proprietary - CesiumCyber
+The project uses `bun.json` instead of `package.json` for dependency management. All scripts have been updated to use `bun run` commands.
 
-## Support
+## 📚 Features
 
-For support, email support@cesiumcyber.com
+- **Threat Intelligence**: Advanced threat analysis tools
+- **Real-time Monitoring**: Live security dashboard
+- **AI Integration**: Powered by OpenAI and other AI providers
+- **Modern UI**: Built with Tailwind CSS and Radix UI
+- **TypeScript**: Full type safety
+- **Testing**: Comprehensive test suite with Vitest and Playwright
+- **Bun Performance**: Faster package installation and runtime
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests: `bun test`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+**Note**: This version leverages Bun's performance improvements including faster package installation, quicker startup times, and reduced memory usage.
 
