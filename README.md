@@ -145,25 +145,37 @@ Optional:
 
 ## 🚀 Deployment
 
-This project is optimized for deployment on platforms that support Bun:
-
 ### Vercel (Recommended)
 
-1. Push code to GitHub
-2. Import repository in Vercel
-3. Configure environment variables
-4. Deploy with Bun runtime enabled
+This project is optimized for Vercel with Bun runtime support:
 
-```bash
-# Or use Vercel CLI
-vercel
-```
+1. **Connect to Vercel**
+   ```bash
+   # Install Vercel CLI
+   npm i -g vercel
+   
+   # Deploy
+   vercel
+   ```
+
+2. **Or use Vercel Dashboard**
+   - Go to [vercel.com](https://vercel.com)
+   - Import GitHub repository
+   - Configure environment variables
+   - Deploy automatically
+
+3. **Environment Variables**
+   - Copy from `.env.vercel` template
+   - Add your API keys and database URLs
+   - Vercel auto-populates some variables
+
+📖 **Full Guide**: See [DEPLOY_VERCEL.md](./DEPLOY_VERCEL.md) for detailed instructions.
 
 ### Other Platforms
 
-- Railway
-- DigitalOcean App Platform
-- Any platform with Docker support
+- **Render**: See [DEPLOY_RENDER.md](./DEPLOY_RENDER.md) (alternative)
+- **Railway**: Manual setup required
+- **DigitalOcean**: Docker configuration needed
 
 ### Manual Deployment
 
@@ -193,6 +205,15 @@ The project uses `bun.json` instead of `package.json` for dependency management.
 - **TypeScript**: Full type safety
 - **Testing**: Comprehensive test suite with Vitest and Playwright
 - **Bun Performance**: Faster package installation and runtime
+- **Vercel Optimized**: Edge deployment, preview URLs, analytics
+
+## 📊 Deployment Status
+
+| Platform | Status | Configuration |
+|----------|--------|---------------|
+| **Vercel** | ✅ Ready | `vercel.json`, `.env.vercel` |
+| Render | ✅ Ready | `render.yaml`, `.env.render` |
+| Manual | ✅ Ready | `bun.json` scripts |
 
 ## 🤝 Contributing
 
