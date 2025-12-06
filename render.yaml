@@ -1,0 +1,28 @@
+services:
+  # Web Service
+  - type: web
+    name: cesium-bun
+    runtime: node
+    plan: free
+    buildCommand: "bun install && bun run build"
+    startCommand: "bun run start"
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_APP_URL
+        value: https://cesium-bun.onrender.com
+      # Add your other environment variables here in Render dashboard
+      # - key: OPENAI_API_KEY
+      #   sync: false
+      # - key: NEXT_PUBLIC_SUPABASE_URL
+      #   sync: false
+      # - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+      #   sync: false
+      # - key: POSTGRES_URL
+      #   sync: false
+
+databases:
+  # PostgreSQL Database (if using Render's managed database)
+  - name: cesium-db
+    plan: free
